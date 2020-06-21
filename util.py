@@ -1,9 +1,11 @@
 ordered_probability_positions = [11, 10, 9, 8, 1, 7, 6, 5, 4, 3, 2]
 
+
 def predict(ring):
     for position in ordered_probability_positions:
         if ring[position-1] == 1:
             return position
+
 
 def get_empirical_accuracy(x, y):
     test_length = len(x)
@@ -14,6 +16,7 @@ def get_empirical_accuracy(x, y):
             correctly_predicted_count += 1
 
     return correctly_predicted_count/test_length
+
 
 def get_predicted_noneleven_rings(x_test, y_test, y_pred):
     test_length = len(x_test)
